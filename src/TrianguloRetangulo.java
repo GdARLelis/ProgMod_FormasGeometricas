@@ -23,7 +23,7 @@
  */
 
  /** Representação de uma forma Triângulo Retângulo */
-public class TrianguloRetangulo extends PoligonoReto{
+public class TrianguloRetangulo extends PoligonoReto{ //sig: herança de PoligonoReto, que herda de FormaGeometrica
     
     /**
      * Construtor: recebe os catetos. A classe-mãe valida ambos valores para o mínimo de 1
@@ -32,6 +32,8 @@ public class TrianguloRetangulo extends PoligonoReto{
      */
     public TrianguloRetangulo(double cateto1, double cateto2){
         //TODO
+        super("TRIANGULO",cateto1,cateto2);
+
     }
 
     /**
@@ -41,6 +43,7 @@ public class TrianguloRetangulo extends PoligonoReto{
     @Override
     public double area(){
         //TODO
+        return (base*altura)/2;
     }
 
     /**
@@ -50,6 +53,7 @@ public class TrianguloRetangulo extends PoligonoReto{
     @Override
     public double perimetro(){
         //TODO
+        return base + altura + hipotenusa();
     }
 
     /**

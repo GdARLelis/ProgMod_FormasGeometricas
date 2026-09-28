@@ -32,6 +32,10 @@ public class Circulo extends FormaGeometrica{
      */
     public Circulo(double raio){
         //TODO
+        super("CIRCULO");
+        if(raio < 1d){
+            raio=1d;
+        }
     }
 
    
@@ -42,6 +46,7 @@ public class Circulo extends FormaGeometrica{
     @Override
     public double area(){
         //TODO
+        return Math.PI*Math.pow(raio,2);
     }
 
     /**
@@ -51,6 +56,7 @@ public class Circulo extends FormaGeometrica{
     @Override
     public double perimetro(){
         //TODO
+        return 2*Math.PI*raio;
     }
 
     /**
